@@ -56,7 +56,7 @@ hwnd = win32gui.FindWindow(0, 'League Of Legends')
 windowRec = win32gui.GetWindowRect(hwnd)
 
 hwndChildList = []
-win32gui.EnumChildWindows(hwnd, lambda hwnd, param: param.append(hwnd),  hwndChildList)
+win32gui.EnumChildWindows(hwnd, lambda hwnd, param: param.append(hwnd), hwndChildList)
     
 while True:
     req = requests.get(url, headers = headers)
